@@ -1,0 +1,17 @@
+---
+galaxy_info:
+  author: Ben Fiedler
+  description: Ansible role to setup prometheus bird exporter
+
+  license: BSD
+
+  min_ansible_version: 2.8
+
+  platforms:
+    - name: Debian
+      versions:
+        - 10
+
+  galaxy_tags: []
+
+dependencies: []

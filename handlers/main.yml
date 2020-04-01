@@ -1,0 +1,14 @@
+---
+- name: restart prometheus-bird-exporter
+  become: True
+  systemd:
+    name: prometheus-bird-exporter
+    state: restarted
+    enabled: yes
+
+- name: restart haproxy
+  become: True
+  systemd:
+    name: haproxy
+    state: restarted
+    enabled: yes

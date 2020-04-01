@@ -1,0 +1,34 @@
+# {{ ansible_managed }}
+
+ARGS="-web.listen-address 127.0.0.1:9324 -format.new -proto.ospf={{ prometheus_bird_exporter_enable_ospf }}"
+
+# Prometheus-bird-exporter supports the following options:
+#
+#  -bird.ipv4
+#        Get protocols from bird (not compatible with -bird.v2) (default true)
+#  -bird.ipv6
+#        Get protocols from bird6 (not compatible with -bird.v2) (default true)
+#  -bird.socket string
+#        Socket to communicate with bird routing daemon (default "/run/bird/bird.ctl")
+#  -bird.socket6 string
+#        Socket to communicate with bird6 routing daemon (not compatible with -bird.v2) (default "/run/bird/bird6.ctl")
+#  -bird.v2
+#        Bird major version >= 2.0 (multi channel protocols)
+#  -format.new
+#        New metric format (more convinient / generic)
+#  -proto.bgp
+#        Enables metrics for protocol BGP (default true)
+#  -proto.direct
+#        Enables metrics for protocol Direct (default true)
+#  -proto.kernel
+#        Enables metrics for protocol Kernel (default true)
+#  -proto.ospf
+#        Enables metrics for protocol OSPF (default true)
+#  -proto.static
+#        Enables metrics for protocol Static (default true)
+#  -version
+#        Print version information.
+#  -web.listen-address string
+#        Address on which to expose metrics and web interface. (default ":9324")
+#  -web.telemetry-path string
+#        Path under which to expose metrics. (default "/metrics")

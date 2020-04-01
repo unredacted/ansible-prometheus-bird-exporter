@@ -1,0 +1,19 @@
+---
+- name: Install prometheus bird exporter
+  become: True
+  apt:
+    name: prometheus-bird-exporter
+
+- name: Configure prometheus-bird-exporter
+  become: True
+  template:
+    src: prometheus-bird-exporter.j2
+    dest: /etc/default/prometheus-bird-exporter
+  notify: restart prometheus-bird-exporter
+
+- name: Configure haproxy
+  become: True
+  template:
+    src: haproxy.conf.j2
+    dest: /etc/haproxy/conf.d/51-prometheus-bird-exporter.conf
+  notify: restart haproxy
