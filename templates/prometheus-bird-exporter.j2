@@ -1,6 +1,6 @@
 # {{ ansible_managed }}
 
-ARGS="-web.listen-address 127.0.0.1:9324 {% if prometheus_bird_exporter_use_version_2 %}-bird.v2 {% endif %}-format.new -proto.ospf={{ prometheus_bird_exporter_enable_ospf }}"
+ARGS="-web.listen-address 127.0.0.1:9324 {% if prometheus_bird_exporter_use_version_2 | bool %}-bird.v2 {% endif %}-format.new -proto.ospf={{ prometheus_bird_exporter_enable_ospf }}"
 
 # Prometheus-bird-exporter supports the following options:
 #
