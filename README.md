@@ -13,7 +13,11 @@ placed in `/etc/haproxy/prometheus-ca.pem`.
 Role Variables
 --------------
 
-None.
+
+| Variable Name | Default Value | Description |
+--------------- |---------------|--------------
+`prometheus_bird_exporter_enable_ospf` | `false` | whether to enable ospf support
+`prometheus_bird_exporter_use_version_2` | `{{ bird_use_version_2 }}` if defined, else `false` | whether to use bird version 2 (incompatible with version 1.6)
 
 Dependencies
 ------------
