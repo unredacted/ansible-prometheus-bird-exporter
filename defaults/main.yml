@@ -1,3 +1,4 @@
 ---
 prometheus_bird_exporter_enable_ospf: false
 prometheus_bird_exporter_use_version_2: "{% if bird_use_version_2 is defined %}{{ bird_use_version_2 }}{% else %}false{% endif %}"
+prometheus_bird_exporter_web_listen_address: "127.0.0.1:9324"
